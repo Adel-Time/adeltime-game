@@ -1,0 +1,66 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://bfofyeeyp8vma"]
+
+[ext_resource type="Texture2D" uid="uid://bhb863t4g12n" path="res://assets/images/characters/adel/stand-0.png" id="1_ijmxr"]
+[ext_resource type="Texture2D" uid="uid://dl587280shhk1" path="res://assets/images/characters/adel/angry-0.png" id="1_pp4cb"]
+[ext_resource type="Texture2D" uid="uid://2ya2cr77kr65" path="res://assets/images/characters/adel/dash-0.png" id="2_3s60h"]
+[ext_resource type="Texture2D" uid="uid://cf0vg3fmmi1k3" path="res://assets/images/characters/adel/walk-0.png" id="2_lhqlb"]
+[ext_resource type="Texture2D" uid="uid://chfu47cudgyij" path="res://assets/images/characters/adel/walk-1.png" id="3_7j8iu"]
+[ext_resource type="Texture2D" uid="uid://dqgxfrkodg825" path="res://assets/images/characters/adel/jump-0.png" id="3_mjbww"]
+[ext_resource type="Texture2D" uid="uid://bewvt5d5mmadg" path="res://assets/images/characters/adel/walk-2.png" id="4_uyfb4"]
+[ext_resource type="Texture2D" uid="uid://d3ytimai7klmo" path="res://assets/images/characters/adel/blink-0.png" id="5_muq4h"]
+[ext_resource type="Texture2D" uid="uid://bdsvd58ydg04c" path="res://assets/images/characters/adel/walk-3.png" id="5_pp4cb"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_pp4cb")
+}],
+"loop": false,
+"name": &"angry",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3s60h")
+}],
+"loop": false,
+"name": &"dash",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_mjbww")
+}],
+"loop": false,
+"name": &"jump",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 15.0,
+"texture": ExtResource("1_ijmxr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_muq4h")
+}],
+"loop": true,
+"name": &"stand",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_lhqlb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_7j8iu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_uyfb4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_pp4cb")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 8.0
+}]

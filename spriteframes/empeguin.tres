@@ -1,0 +1,51 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://bgefcaho7cxfy"]
+
+[ext_resource type="Texture2D" uid="uid://ck3mni2vky2ge" path="res://assets/images/characters/empeguin/fall.png" id="1_3smac"]
+[ext_resource type="Texture2D" uid="uid://bqeaf80p3tp7f" path="res://assets/images/characters/empeguin/stand-0.png" id="1_tupk8"]
+[ext_resource type="Texture2D" uid="uid://blo236lrxwxe5" path="res://assets/images/characters/empeguin/prepare-0.png" id="2_e2dq3"]
+[ext_resource type="Texture2D" uid="uid://dqbih66j44xg2" path="res://assets/images/characters/empeguin/throw-0.png" id="3_3smac"]
+[ext_resource type="Texture2D" uid="uid://sn6spgdy1j4l" path="res://assets/images/characters/empeguin/throw-1.png" id="4_o04gf"]
+[ext_resource type="Texture2D" uid="uid://mc3cp5jkhfen" path="res://assets/images/characters/empeguin/throw-2.png" id="5_v5luv"]
+[ext_resource type="Texture2D" uid="uid://cxl5s0xtsqdh2" path="res://assets/images/characters/empeguin/throw-3.png" id="6_mob1f"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_3smac")
+}],
+"loop": false,
+"name": &"squished",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_tupk8")
+}],
+"loop": true,
+"name": &"stand",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_e2dq3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_tupk8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_3smac")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_o04gf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_v5luv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_mob1f")
+}],
+"loop": false,
+"name": &"throw",
+"speed": 16.0
+}]

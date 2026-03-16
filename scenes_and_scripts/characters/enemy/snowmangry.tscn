@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://crqdkub6j6wx2"]
+
+[ext_resource type="Script" uid="uid://eqeioqo5umrw" path="res://scenes_and_scripts/characters/enemy/snowmangry.gd" id="1_g6jns"]
+[ext_resource type="SpriteFrames" uid="uid://c7twhbl2dqr62" path="res://spriteframes/snowmangry.tres" id="2_g6jns"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_71brh"]
+size = Vector2(26, 79)
+
+[node name="Snowmangry" type="CharacterBody2D" unique_id=1002877734]
+z_index = 50
+collision_layer = 4
+floor_constant_speed = true
+floor_max_angle = 1.3962634
+floor_snap_length = 15.0
+script = ExtResource("1_g6jns")
+
+[node name="Image" type="AnimatedSprite2D" parent="." unique_id=1194736288]
+position = Vector2(27, 24)
+sprite_frames = ExtResource("2_g6jns")
+animation = &"walk"
+flip_h = true
+
+[node name="Collision" type="CollisionShape2D" parent="." unique_id=379196645]
+position = Vector2(25, 30.5)
+shape = SubResource("RectangleShape2D_71brh")
+
+[node name="PlayerDetector" type="Area2D" parent="." unique_id=2127795489]
+collision_layer = 8
+collision_mask = 2
+
+[node name="Collision" type="CollisionShape2D" parent="PlayerDetector" unique_id=2109937616]
+position = Vector2(25, 30.5)
+shape = SubResource("RectangleShape2D_71brh")
+
+[node name="Enabler" type="VisibleOnScreenEnabler2D" parent="." unique_id=1605429428]
+position = Vector2(-10, -10)
+rect = Rect2(-10, -18, 94, 110)
+
+[connection signal="area_entered" from="PlayerDetector" to="." method="_on_player_detector_area_entered"]
+[connection signal="body_entered" from="PlayerDetector" to="." method="_on_player_detector_body_entered"]

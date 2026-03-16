@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://do45didr2quxu"]
+
+[ext_resource type="Script" uid="uid://d0me2o56vmwc" path="res://scenes_and_scripts/characters/player/adel.gd" id="1_080mh"]
+[ext_resource type="SpriteFrames" uid="uid://bfofyeeyp8vma" path="res://spriteframes/adel.tres" id="1_lobbm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_080mh"]
+size = Vector2(28, 55)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hqaly"]
+size = Vector2(28, 1)
+
+[node name="Adel" type="CharacterBody2D" unique_id=638916157]
+z_index = 51
+collision_layer = 2
+collision_mask = 9
+floor_constant_speed = true
+floor_max_angle = 1.3962634
+floor_snap_length = 15.0
+script = ExtResource("1_080mh")
+
+[node name="Image" type="AnimatedSprite2D" parent="." unique_id=1294057165]
+position = Vector2(0, -16)
+sprite_frames = ExtResource("1_lobbm")
+animation = &"stand"
+centered = false
+
+[node name="Collision" type="CollisionShape2D" parent="." unique_id=1472974917]
+position = Vector2(27, 36.5)
+shape = SubResource("RectangleShape2D_080mh")
+
+[node name="Camera" type="Camera2D" parent="." unique_id=851698533]
+limit_left = 0
+limit_bottom = 480
+drag_vertical_enabled = true
+drag_top_margin = 0.4
+drag_bottom_margin = 0.1
+editor_draw_limits = true
+
+[node name="Stomp" type="Area2D" parent="." unique_id=479268113]
+collision_layer = 2
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stomp" unique_id=1353213881]
+position = Vector2(27, 64.5)
+shape = SubResource("RectangleShape2D_hqaly")

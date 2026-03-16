@@ -1,0 +1,34 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://c7twhbl2dqr62"]
+
+[ext_resource type="Texture2D" uid="uid://t4wng7fru8bx" path="res://assets/images/characters/snowmangry/squished-0.png" id="1_hdtam"]
+[ext_resource type="Texture2D" uid="uid://ci7h5nylvt33k" path="res://assets/images/characters/snowmangry/walk-0.png" id="2_jv161"]
+[ext_resource type="Texture2D" uid="uid://00ekkty8ic10" path="res://assets/images/characters/snowmangry/walk-1.png" id="3_0k2od"]
+[ext_resource type="Texture2D" uid="uid://yybecgpqt0yp" path="res://assets/images/characters/snowmangry/walk-2.png" id="4_wxqhm"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_hdtam")
+}],
+"loop": false,
+"name": &"squished",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_jv161")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_0k2od")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_wxqhm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_0k2od")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 10.0
+}]

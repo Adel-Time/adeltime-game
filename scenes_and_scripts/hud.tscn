@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://yeaaelm83b73"]
+
+[ext_resource type="Script" uid="uid://7wn8xax1aahj" path="res://scenes_and_scripts/hud.gd" id="1_y88a7"]
+[ext_resource type="SpriteFrames" uid="uid://cucqgvhi7xx6d" path="res://spriteframes/hearts.tres" id="2_h3fxr"]
+
+[node name="HUD" type="CanvasLayer" unique_id=479776775]
+layer = 10
+script = ExtResource("1_y88a7")
+
+[node name="Panel" type="Panel" parent="." unique_id=1556057728]
+modulate = Color(0, 0, 0, 1)
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 101.0
+offset_bottom = 37.0
+
+[node name="Hearts" type="AnimatedSprite2D" parent="." unique_id=1559370252]
+sprite_frames = ExtResource("2_h3fxr")
+animation = &"one"
+centered = false

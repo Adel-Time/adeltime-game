@@ -1,0 +1,51 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://c6s1bfexjceos"]
+
+[ext_resource type="Texture2D" uid="uid://bs0nvrkxb4cor" path="res://assets/images/characters/rollball/dead.png" id="1_e62tw"]
+[ext_resource type="Texture2D" uid="uid://bk51uwokhqnqs" path="res://assets/images/characters/rollball/roll-0.png" id="2_eeudp"]
+[ext_resource type="Texture2D" uid="uid://bk0s463o2leme" path="res://assets/images/characters/rollball/roll-1.png" id="3_7680t"]
+[ext_resource type="Texture2D" uid="uid://bsqljy76skpmi" path="res://assets/images/characters/rollball/roll-2.png" id="4_6f72y"]
+[ext_resource type="Texture2D" uid="uid://bjmwrpl54d7e8" path="res://assets/images/characters/rollball/roll-3.png" id="5_a5eca"]
+[ext_resource type="Texture2D" uid="uid://cki0454w07e2q" path="res://assets/images/characters/rollball/roll-4.png" id="6_ls5kq"]
+[ext_resource type="Texture2D" uid="uid://dav3k5sont78t" path="res://assets/images/characters/rollball/roll-5.png" id="7_ynf5b"]
+[ext_resource type="Texture2D" uid="uid://b2c6fktnn3ifj" path="res://assets/images/characters/rollball/roll-6.png" id="8_3guxg"]
+[ext_resource type="Texture2D" uid="uid://dslbq0yqayfxo" path="res://assets/images/characters/rollball/roll-7.png" id="9_56uot"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_e62tw")
+}],
+"loop": false,
+"name": &"squished",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_eeudp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_7680t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_6f72y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_a5eca")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ls5kq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ynf5b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_3guxg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_56uot")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 15.0
+}]

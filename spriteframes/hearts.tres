@@ -1,0 +1,41 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://cucqgvhi7xx6d"]
+
+[ext_resource type="Texture2D" uid="uid://jfbn0btki0rj" path="res://assets/images/hud/one.png" id="1_f5fdu"]
+[ext_resource type="Texture2D" uid="uid://4ell0wji8q6f" path="res://assets/images/hud/three.png" id="2_ybjkl"]
+[ext_resource type="Texture2D" uid="uid://eu4pwyyk1k86" path="res://assets/images/hud/two.png" id="3_ugxl3"]
+[ext_resource type="Texture2D" uid="uid://d3st7ogaxkl54" path="res://assets/images/hud/zero.png" id="4_r0ewm"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_f5fdu")
+}],
+"loop": false,
+"name": &"one",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ybjkl")
+}],
+"loop": false,
+"name": &"three",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ugxl3")
+}],
+"loop": false,
+"name": &"two",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_r0ewm")
+}],
+"loop": false,
+"name": &"zero",
+"speed": 5.0
+}]
