@@ -2,20 +2,29 @@
 
 [ext_resource type="TileSet" uid="uid://ddwmrb42du41h" path="res://tilesets/main.tres" id="1_712b0"]
 [ext_resource type="AudioStream" uid="uid://b602ftwkw7ego" path="res://assets/music/present/antarctic_snow.ogg" id="1_cvllr"]
+[ext_resource type="Script" uid="uid://cg3gpfxs5ou56" path="res://scenes_and_scripts/levels/level.gd" id="1_ywyva"]
 [ext_resource type="PackedScene" uid="uid://do45didr2quxu" path="res://scenes_and_scripts/characters/player/adel.tscn" id="2_dtg3b"]
 [ext_resource type="Texture2D" uid="uid://dlnax7ks7s10m" path="res://assets/images/background/snowbg.png" id="2_wdtf3"]
+[ext_resource type="PackedScene" uid="uid://bavqv105yf5th" path="res://scenes_and_scripts/transition/area_transition.tscn" id="3_6kw4m"]
 [ext_resource type="PackedScene" uid="uid://crqdkub6j6wx2" path="res://scenes_and_scripts/characters/enemy/snowmangry.tscn" id="3_ft34r"]
 [ext_resource type="PackedScene" uid="uid://dyqoyyaa5we16" path="res://scenes_and_scripts/characters/enemy/rollball.tscn" id="4_bwh2y"]
 [ext_resource type="PackedScene" uid="uid://ci33ulfksnv0x" path="res://scenes_and_scripts/characters/enemy/empeguin.tscn" id="7_5aqrr"]
 [ext_resource type="PackedScene" uid="uid://yeaaelm83b73" path="res://scenes_and_scripts/hud.tscn" id="8_8tw2l"]
 
 [node name="Test Level" type="Node2D" unique_id=1467184749]
+script = ExtResource("1_ywyva")
+area_name = "Test"
+part_number = "1"
 
 [node name="Misc" type="Node2D" parent="." unique_id=1874889518]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Misc" unique_id=1178264403]
 stream = ExtResource("1_cvllr")
 autoplay = true
+
+[node name="AreaTransition" parent="Misc" unique_id=2067724842 instance=ExtResource("3_6kw4m")]
+
+[node name="HUD" parent="Misc" unique_id=479776775 instance=ExtResource("8_8tw2l")]
 
 [node name="Background" type="Parallax2D" parent="Misc" unique_id=1678593190]
 z_index = -300
@@ -35,10 +44,6 @@ tile_set = ExtResource("1_712b0")
 rendering_quadrant_size = 32
 physics_quadrant_size = 32
 
-[node name="Rollball" parent="Tilemaps" unique_id=1002877734 instance=ExtResource("4_bwh2y")]
-visible = false
-position = Vector2(896, 128)
-
 [node name="Adel" parent="." unique_id=638916157 instance=ExtResource("2_dtg3b")]
 position = Vector2(32, 288)
 
@@ -53,6 +58,8 @@ position = Vector2(2112, 256)
 position = Vector2(2528, 192)
 
 [node name="Empeguin" parent="." unique_id=609672953 instance=ExtResource("7_5aqrr")]
-position = Vector2(320, 256)
+position = Vector2(768, 64)
 
-[node name="HUD" parent="." unique_id=479776775 instance=ExtResource("8_8tw2l")]
+[node name="Rollball2" parent="." unique_id=1002877734 instance=ExtResource("4_bwh2y")]
+visible = false
+position = Vector2(896, 128)

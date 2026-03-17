@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://b1231l582c8bb"]
+
+[ext_resource type="Script" uid="uid://ba0ip0es4jiue" path="res://scenes_and_scripts/intro/present_intro.gd" id="1_1f12y"]
+[ext_resource type="AudioStream" uid="uid://ibfxrh0hux80" path="res://assets/music/misc/menu.ogg" id="2_buaqr"]
+
+[node name="PresentIntro" type="Node2D" unique_id=1082847151]
+script = ExtResource("1_1f12y")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1632153351]
+offset_right = 864.0
+offset_bottom = 480.0
+color = Color(0, 0, 0, 1)
+
+[node name="Text" type="RichTextLabel" parent="." unique_id=78402517]
+offset_left = 30.0
+offset_top = 472.0
+offset_right = 836.0
+offset_bottom = 1432.0
+theme_override_font_sizes/normal_font_size = 19
+bbcode_enabled = true
+text = "[wave][rainbow]The Beginning[/rainbow]
+Time is a powerful thing, especially since it's everywhere, all around us.
+
+However, a strange penguin wants to control time itself.
+He calls himself \"Volcanic Penking\".
+
+He has long been an enemy of the hero of this story, Adel.
+
+As he brings a \"Time Crystal\" from the remains of a temple over to his base built on the temple, he tells himself that this will creating his own future will be easy.
+
+However, he didn't realize he was building this base on Adel's home island until Adel noticed the factory's existence.
+
+Adel has hated factories for a long time, as she watches them destroy the planet she lives on. She hates Volcanic Penking too, and when she sees that these factories are creating enemies, she gets extremely mad.
+
+\"How dare Volcanic Penking do this! I must save this world to make sure the future is as good as it could possibly be!\" Adel says.
+
+What she doesn't realize, is that this adventure will be an adventure through time itself, as she will travel to the past and future just to stop this evil penguin.
+
+
+
+[font_size=24]ADEL TIME - CHAPTER 1 - PRESENT[font_size=18]
+
+Press space to go to Antarctic Snow Area."
+horizontal_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=493355666]
+stream = ExtResource("2_buaqr")
+autoplay = true

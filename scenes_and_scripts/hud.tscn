@@ -16,5 +16,5 @@ offset_bottom = 37.0
 
 [node name="Hearts" type="AnimatedSprite2D" parent="." unique_id=1559370252]
 sprite_frames = ExtResource("2_h3fxr")
-animation = &"one"
+animation = &"three"
 centered = false

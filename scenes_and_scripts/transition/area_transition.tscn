@@ -1,0 +1,138 @@
+[gd_scene format=3 uid="uid://bavqv105yf5th"]
+
+[ext_resource type="FontFile" uid="uid://6xopeeaf763m" path="res://assets/fonts/OdibeeSans-Regular.ttf" id="1_0a210"]
+[ext_resource type="Script" uid="uid://d14qnswjnjact" path="res://scenes_and_scripts/transition/area_transition.gd" id="1_j4nwi"]
+[ext_resource type="AudioStream" uid="uid://ldd7ncshvtv2" path="res://assets/music/present/level_start.ogg" id="3_4nrhm"]
+
+[sub_resource type="Animation" id="Animation_j4nwi"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Area:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [-576.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Part:position:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [864.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Background:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_4nrhm"]
+resource_name = "transition"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Area:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [-608.0, 128.0, 128.0, 864.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Part:position:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [864.0, 128.0, 128.0, -608.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Background:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kkinn"]
+_data = {
+&"RESET": SubResource("Animation_j4nwi"),
+&"transition": SubResource("Animation_4nrhm")
+}
+
+[node name="AreaTransition" type="CanvasLayer" unique_id=2067724842]
+layer = 20
+script = ExtResource("1_j4nwi")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1055424099]
+process_mode = 3
+visible = false
+offset_right = 864.0
+offset_bottom = 480.0
+color = Color(0, 0, 0, 1)
+
+[node name="Area" type="RichTextLabel" parent="." unique_id=1160520963]
+process_mode = 3
+offset_left = -576.0
+offset_top = 192.0
+offset_right = 31.995972
+offset_bottom = 256.0
+theme_override_fonts/normal_font = ExtResource("1_0a210")
+theme_override_font_sizes/normal_font_size = 57
+bbcode_enabled = true
+text = "PLACEHOLDER AREA"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Part" type="RichTextLabel" parent="." unique_id=1688818639]
+process_mode = 3
+offset_left = 864.0
+offset_top = 256.0
+offset_right = 1472.0021
+offset_bottom = 320.0
+theme_override_fonts/normal_font = ExtResource("1_0a210")
+theme_override_font_sizes/normal_font_size = 41
+bbcode_enabled = true
+text = "PART"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Animation" type="AnimationPlayer" parent="." unique_id=1764696906]
+process_mode = 3
+libraries/ = SubResource("AnimationLibrary_kkinn")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1610671748]
+process_mode = 3
+stream = ExtResource("3_4nrhm")
+autoplay = true
+
+[connection signal="animation_finished" from="Animation" to="." method="_on_animation_animation_finished"]

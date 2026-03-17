@@ -1,5 +1,8 @@
 extends CanvasLayer
 
+func _ready() -> void:
+	$Hearts.play("three")
+
 func _process(_delta: float) -> void:
 	if AdelManager.health == 3:
 		$Hearts.play("three")
