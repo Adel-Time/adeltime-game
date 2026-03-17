@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Adel Time"
-run/main_scene="uid://du3ymkh0kbj4"
+run/main_scene="uid://cfcsh6713i4rr"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 

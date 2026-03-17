@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://cfcsh6713i4rr"]
+
+[ext_resource type="Script" uid="uid://3msa4due8sq3" path="res://scenes_and_scripts/menu/main_menu.gd" id="1_h8x48"]
+[ext_resource type="Texture2D" uid="uid://dlnax7ks7s10m" path="res://assets/images/background/snowbg.png" id="1_nhj51"]
+[ext_resource type="Texture2D" uid="uid://b1aso2jxauhjp" path="res://assets/images/menu/logo.png" id="2_dmlv8"]
+[ext_resource type="Texture2D" uid="uid://bewvt5d5mmadg" path="res://assets/images/characters/adel/walk-2.png" id="3_dmlv8"]
+[ext_resource type="AudioStream" uid="uid://ibfxrh0hux80" path="res://assets/music/misc/menu.ogg" id="5_80mcc"]
+
+[sub_resource type="Animation" id="Animation_nhj51"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [25.0]
+}
+
+[sub_resource type="Animation" id="Animation_dmlv8"]
+resource_name = "logo_tween"
+length = 4.0002
+loop_mode = 1
+step = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 4),
+"transitions": PackedFloat32Array(-2, -2, -2),
+"update": 0,
+"values": [25.0, 50.0, 25.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_h8x48"]
+_data = {
+&"RESET": SubResource("Animation_nhj51"),
+&"logo_tween": SubResource("Animation_dmlv8")
+}
+
+[node name="MainMenu" type="Node2D" unique_id=500782617]
+script = ExtResource("1_h8x48")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=844748418]
+modulate = Color(0.1148968, 0.11489681, 0.1148968, 1)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_nhj51")
+centered = false
+
+[node name="Logo" type="Sprite2D" parent="." unique_id=1538800979]
+position = Vector2(288, 25)
+texture = ExtResource("2_dmlv8")
+centered = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Logo" unique_id=1518814039]
+libraries/ = SubResource("AnimationLibrary_h8x48")
+
+[node name="PlayButton" type="Button" parent="." unique_id=1044417280]
+offset_left = 320.0
+offset_top = 256.0
+offset_right = 512.0
+offset_bottom = 320.0
+text = "Play Game"
+icon = ExtResource("3_dmlv8")
+expand_icon = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1143376513]
+stream = ExtResource("5_80mcc")
+autoplay = true
+
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]

@@ -23,7 +23,9 @@ scroll_scale = Vector2(0.5, 0.5)
 repeat_size = Vector2(1708, 960)
 
 [node name="Sprite2D" type="Sprite2D" parent="Misc/Background" unique_id=793545411]
+position = Vector2(0, -480)
 texture = ExtResource("2_wdtf3")
+centered = false
 
 [node name="Tilemaps" type="Node2D" parent="." unique_id=564522740]
 
