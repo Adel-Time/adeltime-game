@@ -37,7 +37,7 @@ func _physics_process(delta: float) -> void:
 	# If position.x is higher than 480, Adel dies.
 	# Needed so the player doesn't fall forever.
 	if position.y > 480:
-		die()
+		AdelManager.health = 0
 
 	# Add the gravity.
 	if not is_on_floor():
@@ -49,8 +49,8 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
-func die():
-	get_tree().call_deferred("reload_current_scene")
+#func die():
+	#get_tree().call_deferred("reload_current_scene")
 
 func move():
 	var direction := Input.get_axis("player_left", "player_right")
@@ -98,9 +98,6 @@ func damage(amount: int):
 		print("3:")
 		AdelManager.health -= amount
 		can_take_damage = false
-
-		if AdelManager.health <= 0:
-			die()
 
 		await get_tree().create_timer(1).timeout
 		can_take_damage = true

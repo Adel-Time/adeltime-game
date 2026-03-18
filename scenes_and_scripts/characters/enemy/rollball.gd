@@ -7,7 +7,8 @@ func _ready() -> void:
 
 func _on_player_detector_area_entered(area) -> void:
 	if area.is_in_group("Stomp"):
-		if area.get_parent().velocity.y > 0:
+		# TODO: Prevent player from being damaged by enemy below when on slope
+		if area.get_parent().get_real_velocity().y > 0:
 			death()
 			print(":3")
 			area.get_parent().stomp_bounce()

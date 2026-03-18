@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bavqv105yf5th" path="res://scenes_and_scripts/transition/area_transition.tscn" id="3_6kw4m"]
 [ext_resource type="PackedScene" uid="uid://crqdkub6j6wx2" path="res://scenes_and_scripts/characters/enemy/snowmangry.tscn" id="3_ft34r"]
 [ext_resource type="PackedScene" uid="uid://dyqoyyaa5we16" path="res://scenes_and_scripts/characters/enemy/rollball.tscn" id="4_bwh2y"]
+[ext_resource type="PackedScene" uid="uid://bixi0ewshakp2" path="res://scenes_and_scripts/transition/player_death.tscn" id="6_oc53p"]
 [ext_resource type="PackedScene" uid="uid://ci33ulfksnv0x" path="res://scenes_and_scripts/characters/enemy/empeguin.tscn" id="7_5aqrr"]
 [ext_resource type="PackedScene" uid="uid://yeaaelm83b73" path="res://scenes_and_scripts/hud.tscn" id="8_8tw2l"]
 
@@ -25,6 +26,8 @@ autoplay = true
 [node name="AreaTransition" parent="Misc" unique_id=2067724842 instance=ExtResource("3_6kw4m")]
 
 [node name="HUD" parent="Misc" unique_id=479776775 instance=ExtResource("8_8tw2l")]
+
+[node name="PlayerDeath" parent="Misc" unique_id=1468334365 instance=ExtResource("6_oc53p")]
 
 [node name="Background" type="Parallax2D" parent="Misc" unique_id=1678593190]
 z_index = -300
@@ -47,10 +50,6 @@ physics_quadrant_size = 32
 [node name="Adel" parent="." unique_id=638916157 instance=ExtResource("2_dtg3b")]
 position = Vector2(32, 288)
 
-[node name="Snowmangry2" parent="." unique_id=760314987 instance=ExtResource("3_ft34r")]
-visible = false
-position = Vector2(736, 96)
-
 [node name="Snowmangry6" parent="." unique_id=1296193251 instance=ExtResource("3_ft34r")]
 position = Vector2(2112, 256)
 
@@ -58,8 +57,4 @@ position = Vector2(2112, 256)
 position = Vector2(2528, 192)
 
 [node name="Empeguin" parent="." unique_id=609672953 instance=ExtResource("7_5aqrr")]
-position = Vector2(768, 64)
-
-[node name="Rollball2" parent="." unique_id=1002877734 instance=ExtResource("4_bwh2y")]
-visible = false
-position = Vector2(896, 128)
+position = Vector2(915, 32)
