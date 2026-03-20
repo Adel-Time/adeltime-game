@@ -50,7 +50,7 @@ stream = ExtResource("1_xt7ta")
 [node name="BlackRectangle" type="ColorRect" parent="." unique_id=1925315363]
 visible = false
 offset_right = 864.0
-offset_bottom = 480.0
+offset_bottom = 512.0
 color = Color(0, 0, 0, 1)
 
 [node name="Fade" type="AnimationPlayer" parent="." unique_id=1214750067]

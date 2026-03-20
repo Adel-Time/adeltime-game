@@ -34,9 +34,9 @@ func _physics_process(delta: float) -> void:
 	if position.x < 0:
 		position.x = 0
 
-	# If position.x is higher than 480, Adel dies.
+	# If position.x is higher than camera limit, Adel dies.
 	# Needed so the player doesn't fall forever.
-	if position.y > 480:
+	if position.y > $Camera.limit_bottom:
 		AdelManager.health = 0
 
 	# Add the gravity.

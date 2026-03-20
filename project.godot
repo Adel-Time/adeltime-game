@@ -22,7 +22,7 @@ AdelManager="*uid://ctrmhuhhpx1qc"
 [display]
 
 window/size/viewport_width=864
-window/size/viewport_height=480
+window/size/viewport_height=512
 window/size/resizable=false
 
 [input]

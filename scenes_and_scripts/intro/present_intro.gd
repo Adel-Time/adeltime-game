@@ -12,4 +12,4 @@ func _process(_delta: float) -> void:
 		textMove -= 0.5
 
 	if Input.is_action_just_pressed("ui_space"):
-		get_tree().change_scene_to_file("res://scenes_and_scripts/levels/test_level.tscn")
+		get_tree().change_scene_to_file("res://scenes_and_scripts/levels/test_level_forest.tscn")
