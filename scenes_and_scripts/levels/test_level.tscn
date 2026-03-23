@@ -33,6 +33,7 @@ autoplay = true
 z_index = -300
 scroll_scale = Vector2(0.5, 0.5)
 repeat_size = Vector2(1708, 960)
+repeat_times = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Misc/Background" unique_id=793545411]
 position = Vector2(0, -480)

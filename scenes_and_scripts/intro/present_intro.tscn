@@ -8,14 +8,14 @@ script = ExtResource("1_1f12y")
 
 [node name="Background" type="ColorRect" parent="." unique_id=1632153351]
 offset_right = 864.0
-offset_bottom = 480.0
+offset_bottom = 512.0
 color = Color(0, 0, 0, 1)
 
 [node name="Text" type="RichTextLabel" parent="." unique_id=78402517]
 offset_left = 30.0
-offset_top = 472.0
+offset_top = 504.0
 offset_right = 836.0
-offset_bottom = 1432.0
+offset_bottom = 1464.0
 theme_override_font_sizes/normal_font_size = 19
 bbcode_enabled = true
 text = "[wave][rainbow]The Beginning[/rainbow]

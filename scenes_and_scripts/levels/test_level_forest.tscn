@@ -162,16 +162,16 @@ position = Vector2(7344, -1408)
 not_moving = false
 moving_horizontal = true
 
-[node name="Adel" parent="." unique_id=638916157 instance=ExtResource("8_f2u6k")]
-position = Vector2(64, -768)
-
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1999351548]
 color = Color(0.3180198, 0.31801978, 0.31801975, 1)
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=132021382]
-position = Vector2(-32, -960.00006)
+position = Vector2(-32, -944.00006)
 scale = Vector2(-6.945333, 56.08663)
 energy = 1.04
 shadow_color = Color(0, 0, 0, 0.59607846)
 shadow_filter_smooth = 5.0
 texture = SubResource("GradientTexture2D_w2xgh")
+
+[node name="Adel" parent="." unique_id=638916157 instance=ExtResource("8_f2u6k")]
+position = Vector2(32, -768)

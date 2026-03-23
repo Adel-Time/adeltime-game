@@ -3,9 +3,9 @@ extends CharacterBody2D
 # code from a scrapped game and also a tutorial, but it's probably pretty different now
 
 # Movement
-var speed = 400.0
-var acceleration = 0.1
-var deceleration = 0.08
+var speed = 450.0
+var acceleration = 0.05
+var deceleration = 0.06
 var min_jump_height = 512.0
 var max_jump_height = 576.0
 var decelerate_on_jump_release = 0.5

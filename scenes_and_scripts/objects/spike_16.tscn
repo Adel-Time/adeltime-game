@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://dnfmljwkxucxf"]
+
+[ext_resource type="Script" uid="uid://qdgq2acaqecg" path="res://scenes_and_scripts/objects/spike_16.gd" id="1_27x46"]
+[ext_resource type="Texture2D" uid="uid://ybwu0ea27x3o" path="res://assets/images/objects/spike16.png" id="1_xtlhj"]
+
+[node name="Spike16" type="StaticBody2D" unique_id=371175919]
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("1_27x46")
+
+[node name="Image" type="Sprite2D" parent="." unique_id=1709115458]
+position = Vector2(-8.2, 15.8)
+texture = ExtResource("1_xtlhj")
+centered = false
+
+[node name="Collision" type="Area2D" parent="." unique_id=1139997505]
+position = Vector2(-8.2, 15.8)
+collision_mask = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collision" unique_id=1914708111]
+polygon = PackedVector2Array(0, 16, 8, 0, 16, 16)
+
+[node name="ShutUpGodot" type="CollisionPolygon2D" parent="." unique_id=1423559374]
+visible = false
+position = Vector2(-8.2, 15.8)
+polygon = PackedVector2Array(0, 16, 8, 0, 16, 16)
+disabled = true
+
+[connection signal="body_entered" from="Collision" to="." method="_on_collision_body_entered"]

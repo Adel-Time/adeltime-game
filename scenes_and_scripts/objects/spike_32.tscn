@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://bnogjknvy84go"]
+
+[ext_resource type="Script" uid="uid://p38xi8rt2hnv" path="res://scenes_and_scripts/objects/spike_32.tscn.gd" id="1_besg5"]
+[ext_resource type="Texture2D" uid="uid://b5qycng8lenx5" path="res://assets/images/objects/spike32.png" id="2_besg5"]
+
+[node name="Spike32" type="StaticBody2D" unique_id=371175919]
+collision_mask = 2
+script = ExtResource("1_besg5")
+
+[node name="Image" type="Sprite2D" parent="." unique_id=1709115458]
+position = Vector2(-32, 0)
+texture = ExtResource("2_besg5")
+centered = false
+
+[node name="Image2" type="Sprite2D" parent="." unique_id=791408328]
+texture = ExtResource("2_besg5")
+centered = false
+
+[node name="Collision" type="Area2D" parent="." unique_id=1139997505]
+position = Vector2(-39.6, 15.400002)
+collision_mask = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collision" unique_id=1914708111]
+polygon = PackedVector2Array(7.5999985, 16.599998, 23.599998, -15.400002, 39.6, 16.599998)
+
+[node name="ShutUpGodot" type="CollisionPolygon2D" parent="." unique_id=134546045]
+visible = false
+position = Vector2(-40.4, 14.6)
+polygon = PackedVector2Array(8.400002, 17.4, 24.400002, -14.6, 40.4, 17.4)
+disabled = true
+
+[node name="Collision2" type="Area2D" parent="." unique_id=1678827632]
+position = Vector2(-7.999998, 15)
+collision_mask = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collision2" unique_id=926044520]
+polygon = PackedVector2Array(7.999998, 17, 23.999998, -15, 40, 17)
+
+[connection signal="body_entered" from="Collision" to="." method="_on_collision_body_entered"]
+[connection signal="body_entered" from="Collision2" to="." method="_on_collision_body_entered"]

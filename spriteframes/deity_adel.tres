@@ -1,0 +1,47 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://dy31l3ybi62w1"]
+
+[ext_resource type="Texture2D" uid="uid://cudorli3435uf" path="res://assets/images/characters/adel/deityAdel.png" id="1_w1l85"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w1l85"]
+atlas = ExtResource("1_w1l85")
+region = Rect2(0, 0, 60, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ljk16"]
+atlas = ExtResource("1_w1l85")
+region = Rect2(0, 74, 60, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gg2r3"]
+atlas = ExtResource("1_w1l85")
+region = Rect2(60, 74, 60, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ijmxr"]
+atlas = ExtResource("1_w1l85")
+region = Rect2(60, 0, 60, 74)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 26.0,
+"texture": SubResource("AtlasTexture_w1l85")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ljk16")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gg2r3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ljk16")
+}],
+"loop": true,
+"name": &"stand",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ijmxr")
+}],
+"loop": false,
+"name": &"walk",
+"speed": 8.0
+}]

@@ -2,6 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://cl85caxf4fxdl" path="res://assets/images/tiles/forest/tree.png" id="1_o5srx"]
 [ext_resource type="Texture2D" uid="uid://mwx120m0o63x" path="res://assets/images/tiles/forest/ground.png" id="2_s73qo"]
+[ext_resource type="PackedScene" uid="uid://dnfmljwkxucxf" path="res://scenes_and_scripts/objects/spike_16.tscn" id="3_bbuu8"]
+[ext_resource type="PackedScene" uid="uid://bnogjknvy84go" path="res://scenes_and_scripts/objects/spike_32.tscn" id="4_ihs57"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s73qo"]
 texture = ExtResource("1_o5srx")
@@ -56,7 +58,7 @@ texture_region_size = Vector2i(64, 64)
 3:4/0 = 0
 3:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(32, 0, 32, 32, -32, 32, -12, 28, 12, 16, 24, 8)
 4:4/0 = 0
-4:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, 0, -12, -4, 12, -16, 32, -32, 32, 32, -32, 32)
+4:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, 0, -20, -5, -10, -7, 10.5, -17, 24, -25.5, 32, -32, 32, 32, -32, 32)
 5:4/0 = 0
 5:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, -24, -24, 0, -8, 32, 4, 32, 32, -32, 32)
 6:4/0 = 0
@@ -120,8 +122,14 @@ texture_region_size = Vector2i(64, 64)
 2:4/0/physics_layer_0/polygon_0/one_way = true
 3:4/0 = 0
 
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_ihs57"]
+resource_name = "objects"
+scenes/1/scene = ExtResource("3_bbuu8")
+scenes/2/scene = ExtResource("4_ihs57")
+
 [resource]
 tile_size = Vector2i(64, 64)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_s73qo")
 sources/1 = SubResource("TileSetAtlasSource_25nxx")
+sources/100 = SubResource("TileSetScenesCollectionSource_ihs57")
