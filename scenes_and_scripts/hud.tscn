@@ -2,6 +2,31 @@
 
 [ext_resource type="Script" uid="uid://7wn8xax1aahj" path="res://scenes_and_scripts/hud.gd" id="1_y88a7"]
 [ext_resource type="SpriteFrames" uid="uid://cucqgvhi7xx6d" path="res://spriteframes/hearts.tres" id="2_h3fxr"]
+[ext_resource type="SpriteFrames" uid="uid://bym2eedamqb2r" path="res://spriteframes/adel_faces.tres" id="3_h3fxr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jckqi"]
+bg_color = Color(0, 0, 0, 0.42745098)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 0.654902)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5uqys"]
+bg_color = Color(0.78431374, 0.3372549, 0.7921569, 0.57254905)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.7647059, 0.42352942, 0.7490196, 0.7372549)
+corner_radius_top_left = 55
+corner_radius_top_right = 55
+corner_radius_bottom_right = 55
+corner_radius_bottom_left = 55
 
 [node name="HUD" type="CanvasLayer" unique_id=479776775]
 layer = 10
@@ -9,12 +34,28 @@ script = ExtResource("1_y88a7")
 
 [node name="Panel" type="Panel" parent="." unique_id=1556057728]
 modulate = Color(0, 0, 0, 1)
+offset_left = 32.0
+offset_top = -4.0
+offset_right = 157.0
+offset_bottom = 37.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_jckqi")
+
+[node name="Panel2" type="Panel" parent="." unique_id=1580137230]
+modulate = Color(0, 0, 0, 1)
 offset_left = -32.0
 offset_top = -32.0
-offset_right = 101.0
-offset_bottom = 37.0
+offset_right = 54.0
+offset_bottom = 51.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5uqys")
 
 [node name="Hearts" type="AnimatedSprite2D" parent="." unique_id=1559370252]
+position = Vector2(55, 0)
 sprite_frames = ExtResource("2_h3fxr")
 animation = &"three"
+centered = false
+
+[node name="AdelFace" type="AnimatedSprite2D" parent="." unique_id=1402639596]
+position = Vector2(1, 1)
+sprite_frames = ExtResource("3_h3fxr")
+animation = &"normal_happy"
 centered = false

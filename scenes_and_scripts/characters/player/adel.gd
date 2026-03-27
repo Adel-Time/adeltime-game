@@ -69,6 +69,7 @@ func move():
 
 	if Input.is_action_just_pressed("player_jump") and is_on_floor():
 		var current_speed = velocity.x
+		$Jump.play()
 		if abs(current_speed) == speed:
 			velocity.y = -max_jump_height
 		else:
@@ -91,12 +92,15 @@ func animate():
 
 func heal(amount: int):
 	if not AdelManager.health >= AdelManager.max_health:
+		$Yay.play()
 		AdelManager.health += amount
 
 func damage(amount: int):
 	if can_take_damage:
 		print("3:")
 		AdelManager.health -= amount
+		$Hurt.play()
+		$CameraTween.play("camera_shake_hurt")
 		can_take_damage = false
 
 		await get_tree().create_timer(1).timeout

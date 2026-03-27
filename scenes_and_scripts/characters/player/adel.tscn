@@ -2,12 +2,57 @@
 
 [ext_resource type="Script" uid="uid://d0me2o56vmwc" path="res://scenes_and_scripts/characters/player/adel.gd" id="1_080mh"]
 [ext_resource type="SpriteFrames" uid="uid://bfofyeeyp8vma" path="res://spriteframes/adel.tres" id="1_lobbm"]
+[ext_resource type="AudioStream" uid="uid://2hfrwqpohu5q" path="res://assets/sounds/adelyay.ogg" id="3_q036w"]
+[ext_resource type="AudioStream" uid="uid://bx1qsv48qqglt" path="res://assets/sounds/adelhurt.ogg" id="4_chwtc"]
+[ext_resource type="AudioStream" uid="uid://cdg2hcyljfxy6" path="res://assets/sounds/adelkick.ogg" id="5_g34dl"]
+[ext_resource type="AudioStream" uid="uid://citlj3u5r675f" path="res://assets/sounds/jump.ogg" id="6_f7ups"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_080mh"]
-size = Vector2(28, 57)
+size = Vector2(26, 63)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hqaly"]
 size = Vector2(28, 1)
+
+[sub_resource type="Animation" id="Animation_q036w"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_chwtc"]
+resource_name = "camera_shake_hurt"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.03333334, 0.06666666, 0.099999994, 0.13333333, 0.16666667, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -10), Vector2(0, 10), Vector2(0, -10), Vector2(0, 10), Vector2(0, -10), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_g34dl"]
+resource_name = "normal"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_g34dl"]
+_data = {
+&"RESET": SubResource("Animation_q036w"),
+&"camera_shake_hurt": SubResource("Animation_chwtc"),
+&"normal": SubResource("Animation_g34dl")
+}
 
 [node name="Adel" type="CharacterBody2D" unique_id=638916157]
 z_index = 51
@@ -20,14 +65,13 @@ floor_snap_length = 15.0
 script = ExtResource("1_080mh")
 
 [node name="Image" type="AnimatedSprite2D" parent="." unique_id=1294057165]
-position = Vector2(0, -10)
-scale = Vector2(2, 2)
+position = Vector2(-4, -11)
 sprite_frames = ExtResource("1_lobbm")
 animation = &"stand"
 centered = false
 
 [node name="Collision" type="CollisionShape2D" parent="." unique_id=1472974917]
-position = Vector2(24, 35.5)
+position = Vector2(24, 32.5)
 shape = SubResource("RectangleShape2D_080mh")
 
 [node name="Camera" type="Camera2D" parent="." unique_id=851698533]
@@ -46,3 +90,24 @@ collision_mask = 8
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stomp" unique_id=1353213881]
 position = Vector2(24, 64.5)
 shape = SubResource("RectangleShape2D_hqaly")
+
+[node name="Yay" type="AudioStreamPlayer" parent="." unique_id=356358769]
+stream = ExtResource("3_q036w")
+volume_db = 5.522
+
+[node name="Hurt" type="AudioStreamPlayer" parent="." unique_id=756764743]
+process_mode = 3
+stream = ExtResource("4_chwtc")
+volume_db = 5.522
+
+[node name="Kick" type="AudioStreamPlayer" parent="." unique_id=292395785]
+stream = ExtResource("5_g34dl")
+volume_db = 5.522
+
+[node name="Jump" type="AudioStreamPlayer" parent="." unique_id=1838038405]
+stream = ExtResource("6_f7ups")
+volume_db = 5.522
+pitch_scale = 1.2
+
+[node name="CameraTween" type="AnimationPlayer" parent="." unique_id=637937609]
+libraries/ = SubResource("AnimationLibrary_g34dl")

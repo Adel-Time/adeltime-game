@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chfu47cudgyij"
-path="res://.godot/imported/walk-1.png-5ce91e54e4b7f271c3b05f817b735e3f.ctex"
+uid="uid://bdtlyedexpdjk"
+path="res://.godot/imported/adel_faces.png-49f3a567bb7b9895e70fa5c3fb584c2c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/characters/adel/walk-1.png"
-dest_files=["res://.godot/imported/walk-1.png-5ce91e54e4b7f271c3b05f817b735e3f.ctex"]
+source_file="res://assets/images/characters/adel/adel_faces.png"
+dest_files=["res://.godot/imported/adel_faces.png-49f3a567bb7b9895e70fa5c3fb584c2c.ctex"]
 
 [params]
 

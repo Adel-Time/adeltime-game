@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhb863t4g12n"
-path="res://.godot/imported/stand-0.png-0226bf787cf60d53b5620439c370b1ff.ctex"
+uid="uid://bx1vaa4xppq7b"
+path="res://.godot/imported/adel_spritesheet.png-3c6fe01937c819f55c82f006e2180bba.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/characters/adel/stand-0.png"
-dest_files=["res://.godot/imported/stand-0.png-0226bf787cf60d53b5620439c370b1ff.ctex"]
+source_file="res://assets/images/characters/adel/adel_spritesheet.png"
+dest_files=["res://.godot/imported/adel_spritesheet.png-3c6fe01937c819f55c82f006e2180bba.ctex"]
 
 [params]
 

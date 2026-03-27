@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b1231l582c8bb"]
 
 [ext_resource type="Script" uid="uid://ba0ip0es4jiue" path="res://scenes_and_scripts/intro/present_intro.gd" id="1_1f12y"]
-[ext_resource type="AudioStream" uid="uid://ibfxrh0hux80" path="res://assets/music/misc/menu.ogg" id="2_buaqr"]
+[ext_resource type="AudioStream" uid="uid://c74vdfleyn32o" path="res://assets/music/present/techno_pyramid.ogg" id="2_buaqr"]
 
 [node name="PresentIntro" type="Node2D" unique_id=1082847151]
 script = ExtResource("1_1f12y")

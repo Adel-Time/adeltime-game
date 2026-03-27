@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bnogjknvy84go"]
 
-[ext_resource type="Script" uid="uid://p38xi8rt2hnv" path="res://scenes_and_scripts/objects/spike_32.tscn.gd" id="1_besg5"]
+[ext_resource type="Script" uid="uid://p38xi8rt2hnv" path="res://scenes_and_scripts/objects/spike_32.gd" id="1_besg5"]
 [ext_resource type="Texture2D" uid="uid://b5qycng8lenx5" path="res://assets/images/objects/spike32.png" id="2_besg5"]
 
 [node name="Spike32" type="StaticBody2D" unique_id=371175919]
